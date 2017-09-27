@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts 'c:l' OPT; do
+while getopts 'c' OPT; do
   case $OPT in
     c) case=${OPTARG};;
   esac
@@ -9,8 +9,6 @@ done
 path='/root/test/'
 
 cd $path
-
-#file= *
 
 if [ "$case" = "upper" ]; then
 echo * | tr '[:lower:]' '[:upper:]'
