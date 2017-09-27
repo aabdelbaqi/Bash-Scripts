@@ -1,0 +1,21 @@
+#!/bin/bash
+
+while getopts 'c:l' OPT; do
+  case $OPT in
+    c) case=${OPTARG};;
+  esac
+done
+
+path='/root/test/'
+
+cd $path
+
+#file= *
+
+if [ "$case" = "upper" ]; then
+echo * | tr '[:lower:]' '[:upper:]'
+elif [ "$case" = "lower" ]; then
+echo * | tr '[:upper:]' '[:lower:]'
+else
+echo "no case entered"
+fi
